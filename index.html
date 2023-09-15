@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    body {
+      font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+
+    
+    .mainframe {
+      position: relative;
+      top:100px;
+      margin:auto;
+      vertical-align: middle;
+      box-shadow: 5px 5px 5px hsl(234, 85%, 88%);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      width: 500px;
+      height: 400px;;
+      border-radius: 20px;
+      
+ 
+    }
+
+    .leftframe {
+      min-height:350px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background-image: linear-gradient(to bottom, hsl(252, 100%, 67%) ,hsl(241, 81%, 54%));
+      text-align: center;
+      padding: 20px;
+    }
+
+    .leftupper {
+      font-weight: bolder;
+      font-size: 1.5rem;
+      color:hsl(241, 100%, 89%)
+      
+      
+    }
+
+    .leftmid {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 100px;
+      background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      height:30%;
+      width: 70%;
+    }
+
+    
+
+    .leftmid-76 {
+      font-size: 3rem;
+      font-weight: bolder;
+      color:white;
+    }
+
+    .outof100 {
+      color: hsl(241, 100%, 89%)
+    }
+
+    .leftlower {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-weight: bold;
+      
+    }
+
+    .leftlowergreat {
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .leftlowernotes {
+      color:hsl(241, 100%, 89%)
+    }
+
+    .rightframe {
+      min-height:350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 20px;
+    }
+
+    .summary {
+      font-size: 1.2rem;
+      color:black;
+      font-weight:bolder
+    }
+
+    
+
+    .card {
+      font-weight: bold;
+      font-size: 0.9rem;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      font-weight:bold;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .card-red {
+      background-color: hsl(0, 100%, 98%);
+      color:hsl(0,100%,67%);
+    }
+
+    .card-yellow {
+      background-color: hsl(39, 100%, 98%);
+      color:hsl(39,100%,56%);
+    }
+
+    .card-aqua {
+      background-color: hsl(166, 100%, 98%);
+      color:hsl(166, 100%, 37%);
+    }
+
+    .card-navy {
+      background-color: hsl(234, 85%, 98%);
+      color:hsl(234, 85%, 45%);
+    }
+
+    .score {
+      text-align: right;
+    }
+
+  
+
+    .fancy {
+      width:95%;
+      height: 40px;
+      border-radius: 30px;
+      background-color: hsl(224, 30%, 27%);
+      border-style: none;
+      color:hsl(241, 100%, 89%);
+      font-weight:bolder; 
+
+    }
+
+    @media (max-width:400px) {
+      
+      .mainframe {
+
+        width: 250px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: auto;
+
+      
+ 
+    }
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div class="mainframe">
+    <div class="leftframe">
+      <div class="leftupper">
+        Your Result
+      </div>
+      <div class="leftmid">
+        <div class="leftmid-76">
+          76
+        </div>
+        <div class="outof100">
+          of 100
+        </div>
+      </div>
+      <div class="leftlower">
+        <div class="leftlowergreat">
+          Great
+        </div>
+        <div class="leftlowernotes">
+          You scored higher than 65% of the people who have taken these tests.
+        </div>
+        
+      </div>
+
+    </div>
+      
+    <div class="rightframe">
+      <div class="summary">
+        Summary
+      </div>
+      <div class="cardarea">
+        <div class="card card-red">
+          <div class="remarks">
+            <img src="assets/images/icon-reaction.svg" alt="ic react" width="15%">
+            Reaction
+          </div>
+          <div class="score">
+            80 / 100
+          </div>
+        </div>
+
+        <div class="card card-yellow">
+          <div class="remarks">
+            <img src="assets/images/icon-memory.svg" alt="ic mem" width="15%">
+            Memory
+          </div>
+          <div class="score">
+            92 / 100
+          </div>
+        </div>
+
+        <div class="card card-aqua">
+          <div class="remarks">
+            <img src="assets/images/icon-verbal.svg" alt="ic verbal" width="15%">
+            Verbal
+          </div>
+          <div class="score">
+            61 / 100
+          </div>
+        </div>
+
+        <div class="card card-navy">
+          <div class="remarks">
+            <img src="assets/images/icon-visual.svg" alt="ic visual" width="15%">
+            Visual
+          </div>
+          <div class="score">
+            72 / 100
+          </div>
+        </div>
+
+      </div>
+      <div class="buttonarea">
+        <button class="fancy">
+          Continue
+        </button>      
+      </div>
+    </div>
+  </div>
+  
+ 
+
+ 
+  
+  
+
+ 
+
+  
+
+  
+
+  
+
+  
+  
+
+</body>
+</html>
